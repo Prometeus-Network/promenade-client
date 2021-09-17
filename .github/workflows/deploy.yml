@@ -26,7 +26,7 @@ jobs:
               echo "CHART=testnet"
           fi
       - name: Deploy to k8s
-      - uses: wahyd4/kubectl-helm-action@master
+        uses: wahyd4/kubectl-helm-action@master
         env:
           KUBE_CONFIG_DATA: ${{ secrets.KUBE_CONFIG_DATA }}
         with:
