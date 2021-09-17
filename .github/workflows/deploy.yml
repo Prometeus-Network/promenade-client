@@ -3,6 +3,7 @@ name: Deploy
 env:
   REGISTRY: registry.digitalocean.com
   IMAGE_NAME: promenade/promenade-client
+  HELM_CHART: promenade-client
 
 on:
   workflow_dispatch:
@@ -31,4 +32,4 @@ jobs:
           KUBE_CONFIG_DATA: ${{ secrets.KUBE_CONFIG_DATA }}
         with:
           args: |
-            helm upgrade --install --set=image.tag=$IMAGE_TAG -f ./charts/promenade-client/$CHART.yaml --debug promenade-client ./charts/promenade-client --kubeconfig /tmp/config
+            helm upgrade --install --set=image.tag=$IMAGE_TAG -f ./charts/$HELM_CHART/$CHART.yaml $HELM_CHART ./charts/$HELM_CHART --kubeconfig /tmp/config
