@@ -15,8 +15,6 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - name: Set environmental variables
-        run:
-      - name: Set environmental variables
         env:
           GITHUB_REF: ${{ github.ref }}
           GITHUB_SHA: ${{ github.sha }}
