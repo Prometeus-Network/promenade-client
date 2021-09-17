@@ -5,12 +5,12 @@ ARG NETWORK
 WORKDIR /app
 
 ENV PATH /app/node_modules/.bin:$PATH
-ENV NODE_ENV=production
 ENV REACT_APP_ENV=$NETWORK
 
 COPY package*.json yarn.lock /app/
 COPY . /app
-RUN yarn --pure-lockfile
+RUN apk --no-cache add git
+RUN yarn --frozen-lockfile
 RUN yarn build
 
 FROM nginx:stable-alpine

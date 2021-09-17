@@ -1,7 +1,10 @@
 {
   "name": "promenade-client",
-  "homepage": "https://github.com/Prometeus-Network/promenade-client",
   "version": "0.1.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Prometeus-Network/promenade-client.git"
+  },
   "private": true,
   "dependencies": {
     "@babel/core": "7.5.5",
