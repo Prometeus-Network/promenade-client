@@ -27,13 +27,13 @@ jobs:
               echo "NETWORK=TESTNET" >> "$GITHUB_ENV"
               echo "IMAGE_TAG=$GITHUB_SHA" >> "$GITHUB_ENV"
           fi
-      - name: Push image to DO registry
       - name: Build image
         run: docker build --build-arg NETWORK=$NETWORK -t $IMAGE_NAME .
       - name: Install doctl
         uses: digitalocean/action-doctl@v2
         with:
           token: ${{ secrets.DIGITALOCEAN_ACCESS_TOKEN }}
+      - name: Push image to DO registry
         run: |
           doctl registry login
           docker tag $IMAGE_NAME $REGISTRY/$IMAGE_NAME:$IMAGE_TAG
