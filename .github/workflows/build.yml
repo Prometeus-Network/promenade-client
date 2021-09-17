@@ -1,0 +1,39 @@
+name: Build
+
+env:
+  REGISTRY: registry.digitalocean.com
+  IMAGE_NAME: promenade/promenade-client
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+jobs:
+  runs-on: ubuntu-latest
+  steps:
+    - uses: actions/checkout@v2
+    - name: Build image
+      run: docker build -t $IMAGE_NAME .
+    - name: Install doctl
+      uses: digitalocean/action-doctl@v2
+      with:
+        token: ${{ secrets.DIGITALOCEAN_ACCESS_TOKEN }}
+    - name: Set env BRANCH
+      run: echo "BRANCH=$(echo $GITHUB_REF | cut -d'/' -f 3)" >> $GITHUB_ENV
+    - name: Set image tag
+      env:
+        GITHUB_SHA: ${{ github.sha }}
+      run: |
+        if [[ $BRANCH == 'main'  ]]; then
+            echo "IMAGE_TAG=latest" >> "$GITHUB_ENV"
+        else
+            echo "IMAGE_TAG=$GITHUB_SHA" >> "$GITHUB_ENV"
+        fi
+    - name: Push image to DO registry
+      env:
+        IMAGE_TAG: ${{ github.sha }}
+      run: |
+        doctl registry login
+        docker tag $IMAGE_NAME $REGISTRY/$IMAGE_NAME
+        docker push $REGISTRY/$IMAGE_NAME:$IMAGE_TAG
