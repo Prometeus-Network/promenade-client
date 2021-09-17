@@ -18,7 +18,7 @@ const RPC = isMainnet
     };
 
 export const network = new NetworkConnector({
-  defaultChainId: ChainId.FANTOM,
+  defaultChainId: isMainnet ? ChainId.FANTOM : ChainId.FANTOM_TESTNET,
   urls: RPC,
 });
 
