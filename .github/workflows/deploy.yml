@@ -20,10 +20,10 @@ jobs:
           export BRANCH=$(echo $GITHUB_REF | cut -d'/' -f 3)
           if [[ $BRANCH == 'main'  ]]; then
               echo "IMAGE_TAG=latest" >> "$GITHUB_ENV"
-              echo "CHART=testnet"
+              echo "CHART=testnet" >> "$GITHUB_ENV"
           else
               echo "IMAGE_TAG=latest" >> "$GITHUB_ENV"
-              echo "CHART=testnet"
+              echo "CHART=testnet" >> "$GITHUB_ENV"
           fi
       - name: Deploy to k8s
         uses: wahyd4/kubectl-helm-action@master
