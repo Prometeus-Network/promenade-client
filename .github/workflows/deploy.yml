@@ -8,7 +8,7 @@ on:
   workflow_dispatch:
 
 jobs:
-  build:
+  deploy:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
@@ -25,14 +25,10 @@ jobs:
               echo "IMAGE_TAG=latest" >> "$GITHUB_ENV"
               echo "CHART=testnet"
           fi
-      - uses: yokawasa/action-setup-kube-tools@v0.7.1
-        with:
-          kubectl: 1.22.2
-          helm: 3.6.3
+      - name: Deploy to k8s
+      - uses: wahyd4/kubectl-helm-action@master
         env:
           KUBE_CONFIG_DATA: ${{ secrets.KUBE_CONFIG_DATA }}
-      - run: |
-          echo "$KUBE_CONFIG_DATA" | base64 -d > /tmp/config
-          export KUBECONFIG=/tmp/config
-      - name: Deploy
-        run: helm upgrade --install --set=image.tag=$IMAGE_TAG -f ./charts/promenade-client/$CHART.yaml --debug promenade-client ./charts/promenade-client --kubeconfig /tmp/config
+        with:
+          args: |
+            helm upgrade --install --set=image.tag=$IMAGE_TAG -f ./charts/promenade-client/$CHART.yaml --debug promenade-client ./charts/promenade-client --kubeconfig /tmp/config
