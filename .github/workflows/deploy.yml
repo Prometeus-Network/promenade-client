@@ -8,7 +8,7 @@ on:
   workflow_dispatch:
 
 jobs:
-  build:
+  deploy:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
@@ -20,10 +20,15 @@ jobs:
           export BRANCH=$(echo $GITHUB_REF | cut -d'/' -f 3)
           if [[ $BRANCH == 'main'  ]]; then
               echo "IMAGE_TAG=latest" >> "$GITHUB_ENV"
-              echo "CHART=testnet"
+              echo "CHART=testnet" >> "$GITHUB_ENV"
           else
-              echo "IMAGE_TAG=$GITHUB_SHA" >> "$GITHUB_ENV"
-              echo "CHART=testnet"
+              echo "IMAGE_TAG=latest" >> "$GITHUB_ENV"
+              echo "CHART=testnet" >> "$GITHUB_ENV"
           fi
-      - name: Deploy
-        run: helm upgrade --install --set=image.tag=$IMAGE_TAG -f ./charts/promenade-client/$CHART.yaml --debug promenade-client ./charts/promenade-client
+      - name: Deploy to k8s
+        uses: wahyd4/kubectl-helm-action@master
+        env:
+          KUBE_CONFIG_DATA: ${{ secrets.KUBE_CONFIG_DATA }}
+        with:
+          args: |
+            helm upgrade --install --set=image.tag=$IMAGE_TAG -f ./charts/promenade-client/$CHART.yaml --debug promenade-client ./charts/promenade-client --kubeconfig /tmp/config
