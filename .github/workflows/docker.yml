@@ -19,7 +19,7 @@ jobs:
           GITHUB_REF: ${{ github.ref }}
           GITHUB_SHA: ${{ github.sha }}
         run: |
-          echo "BRANCH=$(echo $GITHUB_REF | cut -d'/' -f 3)" >> $GITHUB_ENV
+          export BRANCH=$(echo $GITHUB_REF | cut -d'/' -f 3)
           if [[ $BRANCH == 'main'  ]]; then
               echo "NETWORK=MAINNET" >> "$GITHUB_ENV"
               echo "IMAGE_TAG=latest" >> "$GITHUB_ENV"
