@@ -21,7 +21,7 @@ jobs:
         run: |
           export BRANCH=$(echo $GITHUB_REF | cut -d'/' -f 3)
           if [[ $BRANCH == 'main'  ]]; then
-              echo "NETWORK=MAINNET" >> "$GITHUB_ENV"
+              echo "NETWORK=TESTNET" >> "$GITHUB_ENV"
               echo "IMAGE_TAG=latest" >> "$GITHUB_ENV"
           else
               echo "NETWORK=TESTNET" >> "$GITHUB_ENV"
@@ -34,7 +34,11 @@ jobs:
         with:
           token: ${{ secrets.DIGITALOCEAN_ACCESS_TOKEN }}
       - name: Push image to DO registry
+        env:
+          GITHUB_SHA: ${{ github.sha }}
         run: |
           doctl registry login
           docker tag $IMAGE_NAME $REGISTRY/$IMAGE_NAME:$IMAGE_TAG
+          docker tag $IMAGE_NAME $REGISTRY/$IMAGE_NAME:$GITHUB_SHA
           docker push $REGISTRY/$IMAGE_NAME:$IMAGE_TAG
+          docker push $REGISTRY/$IMAGE_NAME:$GITHUB_SHA
