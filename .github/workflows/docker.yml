@@ -36,5 +36,5 @@ jobs:
           token: ${{ secrets.DIGITALOCEAN_ACCESS_TOKEN }}
         run: |
           doctl registry login
-          docker tag $IMAGE_NAME $REGISTRY/$IMAGE_NAME
+          docker tag $IMAGE_NAME $REGISTRY/$IMAGE_NAME:$IMAGE_TAG
           docker push $REGISTRY/$IMAGE_NAME:$IMAGE_TAG
