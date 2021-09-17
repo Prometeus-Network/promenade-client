@@ -35,4 +35,4 @@ jobs:
           echo "$KUBE_CONFIG_DATA" | base64 -d > /tmp/config
           export KUBECONFIG=/tmp/config
       - name: Deploy
-        run: helm upgrade --install --set=image.tag=$IMAGE_TAG -f ./charts/promenade-client/$CHART.yaml --debug promenade-client ./charts/promenade-client
+        run: helm upgrade --install --set=image.tag=$IMAGE_TAG -f ./charts/promenade-client/$CHART.yaml --debug promenade-client ./charts/promenade-client --kubeconfig /tmp/config
