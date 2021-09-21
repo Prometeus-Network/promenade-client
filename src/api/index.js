@@ -9,12 +9,12 @@ export const useApi = () => {
     : 'https://testnet.ftmscan.com';
 
   const apiUrl = isMainnet
-    ? 'https://api.artion.io'
-    : 'https://api.testnet.artion.io';
+    ? 'https://api.promenade.art'
+    : 'https://api-testnet.promenade.art';
 
   const storageUrl = isMainnet
-    ? 'https://storage.artion.io'
-    : 'https://storage.testnet.artion.io';
+    ? 'https://storage.promenade.art'
+    : 'https://storage.testnet.promenade.art';
 
   const getNonce = async (address, authToken) => {
     const res = await axios({
