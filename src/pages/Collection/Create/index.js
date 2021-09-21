@@ -273,7 +273,7 @@ const CollectionCreate = ({ isRegister }) => {
           try {
             const signer = await getSigner();
             signature = await signer.signMessage(
-              `Approve Signature on Artion.io with nonce ${nonce}`
+              `Approve Signature on Promenade.art with nonce ${nonce}`
             );
           } catch (err) {
             toast(
@@ -386,7 +386,7 @@ const CollectionCreate = ({ isRegister }) => {
                 try {
                   const signer = await getSigner();
                   signature = await signer.signMessage(
-                    `Approve Signature on Artion.io with nonce ${nonce}`
+                    `Approve Signature on Promenade.art with nonce ${nonce}`
                   );
                 } catch (err) {
                   toast(
@@ -632,7 +632,7 @@ const CollectionCreate = ({ isRegister }) => {
             <div className={styles.inputTitle}>
               Royalty *&nbsp;
               <BootstrapTooltip
-                title="Each NFT under this collection exchanged through Artion will have a percentage of sale given to nominated wallet address."
+                title="Each NFT under this collection exchanged through Promenade will have a percentage of sale given to nominated wallet address."
                 placement="top"
               >
                 <HelpOutlineIcon />
