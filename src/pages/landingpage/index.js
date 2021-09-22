@@ -33,7 +33,7 @@ const cards = [
     icon: card2,
     title: 'Super Fast',
     description:
-      'Since Artion runs on the Fantom Opera Network, transactions are usually confirmed within 1-2 seconds.',
+      'Since Promenade runs on the Fantom Opera Network, transactions are usually confirmed within 1-2 seconds.',
     path: '/',
   },
   {
@@ -47,7 +47,7 @@ const cards = [
     icon: card4,
     title: 'Zero Fees',
     description:
-      'Trade NFTs via auction or direct offer without any fees taken by Artion.',
+      'Trade NFTs via auction or direct offer without any fees taken by Promenade.',
     path: '/explore',
   },
 ];
@@ -104,9 +104,9 @@ const LandingPage = () => {
           <div className={styles.mainLeft}>
             <div
               className={styles.title}
-            >{`Trade without platform fees on Artion`}</div>
+            >{`Trade without platform fees on Promenade`}</div>
             <div className={styles.subtitle}>
-              Artion is an NFT marketplace built on Fantom. Create and trade
+              Promenade is an NFT marketplace built on Fantom. Create and trade
               NFTs instantly with low network costs.
             </div>
             <Link to="/explore" className={styles.exploreButton}>
@@ -127,7 +127,7 @@ const LandingPage = () => {
         </div>
         <div className={styles.about}>
           <div className={styles.aboutInner}>
-            <div className={styles.aboutTitle}>Why Artion</div>
+            <div className={styles.aboutTitle}>Why Promenade</div>
             <div className={styles.aboutCards}>
               {cards.map((card, key) =>
                 renderAboutCard(
