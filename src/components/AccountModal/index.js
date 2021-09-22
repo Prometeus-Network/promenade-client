@@ -111,7 +111,7 @@ const AccountModal = () => {
       let addr;
       try {
         const signer = await getSigner();
-        const msg = `Approve Signature on Promenade.io with nonce ${nonce}`;
+        const msg = `Approve Signature on Promenade.art with nonce ${nonce}`;
         signature = await signer.signMessage(msg);
         addr = ethers.utils.verifyMessage(msg, signature);
       } catch (err) {
