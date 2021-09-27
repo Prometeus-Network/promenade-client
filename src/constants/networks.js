@@ -34,7 +34,7 @@ export const Contracts = {
   },
   [ChainId.FANTOM_TESTNET]: {
     auction: process.env.AUCTION_ADDRESS,
-    sales: process.env.MARKETPLACE_PROXY_ADDRESS, 
+    sales: process.env.MARKETPLACE_PROXY_ADDRESS,
     bundleSales: process.env.BUNDLE_PROXY_ADDRESS,
     factory: process.env.FACTORY_ADDRESS,
     privateFactory: process.env.PRIVATE_FACTORY_ADDRESS,
