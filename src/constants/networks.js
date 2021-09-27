@@ -33,10 +33,10 @@ export const Contracts = {
     privateArtFactory: '0x1Ec3452a2A96AEd6A4513D6A036d17a6C3449551',
   },
   [ChainId.FANTOM_TESTNET]: {
-    auction: '0x7dd79ECf8cC6D0ffaf50C431CCd2Ead45433942E',
-    sales: '0xD9CBbc5Cf9F2cCd4B3F66a701faBe1e4801F67a4', 
-    bundleSales: '0x58F9d997197ACFa8Ac471d089Ffe537FA32372B9',
-    factory: '0x578853B8ee8D0a3ECD4B3b5627B3838d71094f45',
-    privateFactory: '0xbDFeE1383AB4D18818201E1b8Ad495402C6fb1ae',
+    auction: process.env.AUCTION_ADDRESS,
+    sales: process.env.MARKETPLACE_PROXY_ADDRESS, 
+    bundleSales: process.env.BUNDLE_PROXY_ADDRESS,
+    factory: process.env.FACTORY_ADDRESS,
+    privateFactory: process.env.PRIVATE_FACTORY_ADDRESS,
   },
 };
