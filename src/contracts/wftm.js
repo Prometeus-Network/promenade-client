@@ -6,7 +6,8 @@ import useContract from 'hooks/useContract';
 
 const WFTM_ADDRESS = {
   [ChainId.FANTOM]: '0x21be370d5312f44cb42ce377bc9b8a0cef1a4c83',
-  [ChainId.FANTOM_TESTNET]: '0xf1277d1Ed8AD466beddF92ef448A132661956621',
+  [ChainId.FANTOM_TESTNET]: process.env.WRAPPED_FANTOM_TESTNET,
+  //Wrapped fantom
 };
 
 // eslint-disable-next-line no-undef
