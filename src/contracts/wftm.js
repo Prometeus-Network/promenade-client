@@ -6,7 +6,7 @@ import useContract from 'hooks/useContract';
 
 const WFTM_ADDRESS = {
   [ChainId.FANTOM]: '0x21be370d5312f44cb42ce377bc9b8a0cef1a4c83',
-  [ChainId.FANTOM_TESTNET]: process.env.WRAPPED_FANTOM_TESTNET,
+  [ChainId.FANTOM_TESTNET]: '0x1EF81Cc9040A7bf316EeD03BcAe56EdC645E1425',
   //Wrapped fantom
 };
 
