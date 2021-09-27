@@ -25,8 +25,8 @@ export const NETWORK_LABEL = {
 export const Contracts = {
   [ChainId.FANTOM]: {
     auction: '0xdb404BF33c90b51176cA3db85288296B8594D134',
-    sales: '0x19fD7C9B72cd944f987E0aB1FdD33fF8f68Cf87C',
-    bundleSales: '0x0EeB6B95B52dfDFb86CcF960F8408a211555b63b',
+    sales: '0x19fD7C9B72cd944f987E0aB1FdD33fF8f68Cf87C', //Marketplace Proxy
+    bundleSales: '0x0EeB6B95B52dfDFb86CcF960F8408a211555b63b', //Bundle Marketplace Proxy
     factory: '0x39B7788d6bb04d1860aaA6685F109aFD95D79Db3', //FantomNFTFactory
     privateFactory: '0x21CC778A6Ab21CBbB0ea62f0bFC7e6163C06dD75', //FantomNFTFactoryPrivate
     artFactory: '0x865AeDe044a707B9a3e127908Ad1F3f4F1086949',
@@ -34,8 +34,8 @@ export const Contracts = {
   },
   [ChainId.FANTOM_TESTNET]: {
     auction: '0x7dd79ECf8cC6D0ffaf50C431CCd2Ead45433942E',
-    sales: '0xBA8A36804a6BaE272fe4C8A2F5Cf551b03C26A01',
-    bundleSales: '0x03b0Dd901E3366f6666c2eb411D14c469b8E8727',
+    sales: '0xD9CBbc5Cf9F2cCd4B3F66a701faBe1e4801F67a4', 
+    bundleSales: '0x58F9d997197ACFa8Ac471d089Ffe537FA32372B9',
     factory: '0x578853B8ee8D0a3ECD4B3b5627B3838d71094f45',
     privateFactory: '0xbDFeE1383AB4D18818201E1b8Ad495402C6fb1ae',
   },
