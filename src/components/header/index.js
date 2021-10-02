@@ -421,9 +421,7 @@ const Header = ({ border }) => {
                         ) : (
                           tk.thumbnailPath &&
                           (tk.thumbnailPath.length > 10 ? (
-                            <img
-                              src={`${storageUrl}/image/${tk.thumbnailPath}`}
-                            />
+                            <img src={`${storageUrl}/${tk.thumbnailPath}`} />
                           ) : tk.thumbnailPath === '.' ? (
                             <img src={tk.imageURL} />
                           ) : null)

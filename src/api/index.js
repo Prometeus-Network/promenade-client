@@ -14,7 +14,7 @@ export const useApi = () => {
 
   const storageUrl = isMainnet
     ? 'https://storage.promenade.art'
-    : 'https://storage.testnet.promenade.art';
+    : 'https://storage.promenade.art';
 
   const getNonce = async (address, authToken) => {
     const res = await axios({

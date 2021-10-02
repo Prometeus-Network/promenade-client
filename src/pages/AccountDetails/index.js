@@ -887,7 +887,7 @@ const AccountDetails = () => {
                           <div className={styles.media}>
                             {renderMedia(
                               activity.thumbnailPath.length > 10
-                                ? `${storageUrl}/image/${activity.thumbnailPath}`
+                                ? `${storageUrl}/${activity.thumbnailPath}`
                                 : activity.imageURL
                             )}
                           </div>
@@ -984,7 +984,7 @@ const AccountDetails = () => {
                         <div className={styles.media}>
                           {renderMedia(
                             offer.thumbnailPath.length > 10
-                              ? `${storageUrl}/image/${offer.thumbnailPath}`
+                              ? `${storageUrl}/${offer.thumbnailPath}`
                               : offer.imageURL
                           )}
                         </div>
@@ -1073,7 +1073,7 @@ const AccountDetails = () => {
                         <div className={styles.media}>
                           {renderMedia(
                             bid.thumbnailPath.length > 10
-                              ? `${storageUrl}/image/${bid.thumbnailPath}`
+                              ? `${storageUrl}/${bid.thumbnailPath}`
                               : bid.imageURL
                           )}
                         </div>

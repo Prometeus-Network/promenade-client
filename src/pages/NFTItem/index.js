@@ -2612,7 +2612,7 @@ const NFTItem = () => {
             <SuspenseImg
               src={
                 item.thumbnailPath.length > 10
-                  ? `${storageUrl}/image/${item.thumbnailPath}`
+                  ? `${storageUrl}/${item.thumbnailPath}`
                   : item.metadata.image
               }
             />
@@ -2916,7 +2916,7 @@ const NFTItem = () => {
                             <SuspenseImg
                               src={
                                 item.thumbnailPath?.length > 10
-                                  ? `${storageUrl}/image/${item.thumbnailPath}`
+                                  ? `${storageUrl}/${item.thumbnailPath}`
                                   : item.metadata?.image
                               }
                             />
