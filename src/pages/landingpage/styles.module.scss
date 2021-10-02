@@ -73,7 +73,7 @@
   cursor: pointer;
   text-decoration: none;
   margin-top: 24px;
-  background-color: #1969FF;
+  background-color: #F34C24;
 
   &:hover {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
@@ -259,7 +259,7 @@
   justify-content: space-between;
 
   &.extraCard {
-    background-color: #1969FF;
+    background-color: #000000;
 
     .cardLabel {
       color: #FFF;
@@ -270,7 +270,7 @@
     }
 
     .browseBtnIcon {
-      color: #1969FF;
+      color: #F34C24;
     }
   }
 }
@@ -286,7 +286,7 @@
   width: 48px;
   height: 48px;
   border-radius: 50%;
-  background-color: #1969FF;
+  background-color: #000000;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -306,7 +306,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background-color: #1969FF;
+  background-color: #000000;
 }
 
 .logo {

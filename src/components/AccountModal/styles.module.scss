@@ -91,7 +91,7 @@
   border-radius: 8px;
   font-weight: 700;
   font-size: 18px;
-  background-color: #007bff;
+  background-color: #F34C24;
   box-shadow: none;
   display: flex;
   align-items: center;
@@ -100,15 +100,15 @@
 }
 
 .save {
-  background-color: #1969FF;
+  background-color: #F34C24;
   color: #FFF;
   margin-right: 40px
 };
 
 .cancel {
   background-color: #FFF;
-  border: 1px solid #1969FF;
-  color: #1969FF;
+  border: 1px solid #F34C24;
+  color: #F34C24;
 }
 
 .avatarBox {
@@ -145,7 +145,7 @@
 .uploadIcon {
   width: 24px;
   height: 24px;
-  color: #1969FF;
+  color: #F34C24;
 }
 
 .disabled {

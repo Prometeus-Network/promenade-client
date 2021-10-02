@@ -86,7 +86,7 @@ import mediumIcon from 'assets/svgs/medium.svg';
 import filterIcon from 'assets/svgs/filter.svg';
 import checkIcon from 'assets/svgs/check.svg';
 import shareIcon from 'assets/svgs/share.svg';
-import iconPromenade from 'assets/svgs/logo_small_blue.svg';
+import iconPromenade from 'assets/svgs/logo_small_orange.svg';
 import iconFacebook from 'assets/imgs/facebook.png';
 import iconTwitter from 'assets/svgs/twitter_blue.svg';
 
@@ -2347,7 +2347,7 @@ const NFTItem = () => {
           fallback={
             <Loader
               type="Oval"
-              color="#007BFF"
+              color="#F34C24"
               height={32}
               width={32}
               className={styles.loader}
@@ -2606,7 +2606,7 @@ const NFTItem = () => {
         <div className={styles.bundleItemImage}>
           <Suspense
             fallback={
-              <Loader type="Oval" color="#007BFF" height={32} width={32} />
+              <Loader type="Oval" color="#F34C24" height={32} width={32} />
             }
           >
             <SuspenseImg
@@ -2873,7 +2873,7 @@ const NFTItem = () => {
                 {loading ? (
                   <Loader
                     type="Oval"
-                    color="#007BFF"
+                    color="#F34C24"
                     height={32}
                     width={32}
                     className={styles.loader}
@@ -2906,7 +2906,7 @@ const NFTItem = () => {
                             fallback={
                               <Loader
                                 type="Oval"
-                                color="#007BFF"
+                                color="#F34C24"
                                 height={32}
                                 width={32}
                                 className={styles.loader}
@@ -3558,7 +3558,7 @@ const NFTItem = () => {
                 <div className={styles.panelBody}>
                   {loading ? (
                     <div className={styles.loadingIndicator}>
-                      <ClipLoader color="#007BFF" size={16} />
+                      <ClipLoader color="#F34C24" size={16} />
                     </div>
                   ) : (
                     <div className={styles.itemsList}>

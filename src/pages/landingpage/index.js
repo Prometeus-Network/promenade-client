@@ -11,7 +11,7 @@ import FilterActions from 'actions/filter.actions';
 import Header from 'components/header';
 
 import umansExample from 'assets/imgs/umans_example.png';
-import logo from 'assets/svgs/logo_white.svg';
+import logo from 'assets/svgs/logo_footer.svg';
 import fantomLogo from 'assets/svgs/fantom_logo_white.svg';
 import card1 from 'assets/svgs/card1.svg';
 import card2 from 'assets/svgs/card2.svg';
