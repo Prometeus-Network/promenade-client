@@ -9,13 +9,13 @@ import HeaderActions from 'actions/header.actions';
 import FilterActions from 'actions/filter.actions';
 import Header from 'components/header';
 
-import umansExample from 'assets/imgs/umans_example.png';
+import frontPicture from 'assets/imgs/frontPicture.jpg';
 import logo from 'assets/svgs/logo_footer.svg';
 import card1 from 'assets/svgs/card1.svg';
 import card2 from 'assets/svgs/card2.svg';
 import card3 from 'assets/svgs/card3.svg';
 import card4 from 'assets/svgs/card4.svg';
-import search from 'assets/svgs/magnifier.svg';
+import search from 'assets/svgs/explore-all-pic.svg';
 
 import styles from './styles.module.scss';
 
@@ -110,12 +110,14 @@ const LandingPage = () => {
           </div>
           <div className={styles.card}>
             <div className={styles.cardMedia}>
-              <img src={umansExample} />
+              <img src={frontPicture} />
             </div>
             <div className={styles.cardInfo}>
-              <div className={styles.cardCategory}>ZooCoin Community NFT</div>
+              <div className={styles.cardCategory}>Cyber Punk 2077</div>
               <div className={styles.cardName}>
-                {'Fountain "Farroupilha" Park'}
+                {
+                  'Bruno is cyber punk from year 2077 that came back in our reality.'
+                }
               </div>
             </div>
           </div>
