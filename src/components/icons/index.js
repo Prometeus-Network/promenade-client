@@ -13,17 +13,17 @@ import {
   faDownload,
 } from '@fortawesome/free-solid-svg-icons';
 
-export const UndoIcon = <FontAwesomeIcon icon={faUndoAlt} color="#007bff" />;
-export const RedoIcon = <FontAwesomeIcon icon={faRedoAlt} color="#007bff" />;
-export const PaletteIcon = <FontAwesomeIcon icon={faPalette} color="#007bff" />;
-export const SaveIcon = <FontAwesomeIcon icon={faSave} color="#007bff" />;
-export const LoadIcon = <FontAwesomeIcon icon={faUpload} color="#007bff" />;
-export const TrashIcon = <FontAwesomeIcon icon={faTrash} color="#007bff" />;
-export const BGIcon = <FontAwesomeIcon icon={faFillDrip} color="#007bff" />;
-export const EraserIcon = <FontAwesomeIcon icon={faEraser} color="#007bff" />;
+export const UndoIcon = <FontAwesomeIcon icon={faUndoAlt} color="#F34C24" />;
+export const RedoIcon = <FontAwesomeIcon icon={faRedoAlt} color="#F34C24" />;
+export const PaletteIcon = <FontAwesomeIcon icon={faPalette} color="#F34C24" />;
+export const SaveIcon = <FontAwesomeIcon icon={faSave} color="#F34C24" />;
+export const LoadIcon = <FontAwesomeIcon icon={faUpload} color="#F34C24" />;
+export const TrashIcon = <FontAwesomeIcon icon={faTrash} color="#F34C24" />;
+export const BGIcon = <FontAwesomeIcon icon={faFillDrip} color="#F34C24" />;
+export const EraserIcon = <FontAwesomeIcon icon={faEraser} color="#F34C24" />;
 export const DownloadIcon = (
-  <FontAwesomeIcon icon={faDownload} color="#007bff" />
+  <FontAwesomeIcon icon={faDownload} color="#F34C24" />
 );
 export const fileUploadIcon = (
-  <FontAwesomeIcon icon={faFileUpload} color="#007bff" />
+  <FontAwesomeIcon icon={faFileUpload} color="#F34C24" />
 );

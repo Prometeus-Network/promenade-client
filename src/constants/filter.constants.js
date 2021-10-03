@@ -1,10 +1,10 @@
-import iconArt from 'assets/svgs/rainbow.svg';
-import iconCollectibles from 'assets/svgs/bear.svg';
-import iconSports from 'assets/svgs/soccerball.svg';
-import iconUtility from 'assets/svgs/tools.svg';
-import iconTrading from 'assets/svgs/cardboard.svg';
-import iconVirtual from 'assets/svgs/monster.svg';
-import iconDomain from 'assets/svgs/domain.svg';
+import iconArt from 'assets/svgs/art-pic.svg';
+import iconCollectibles from 'assets/svgs/collectible-pic.svg';
+import iconSports from 'assets/svgs/sports-pic.svg';
+import iconUtility from 'assets/svgs/utility-pic.svg';
+import iconTrading from 'assets/svgs/trading-cards-pic.svg';
+import iconVirtual from 'assets/svgs/virtual-worlds-pic.svg';
+import iconDomain from 'assets/svgs/domains-pic.svg';
 
 export const GroupFilters = [
   {

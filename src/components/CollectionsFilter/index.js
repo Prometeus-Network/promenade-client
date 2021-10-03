@@ -87,7 +87,7 @@ const useStyles = makeStyles(() => ({
   },
   checkIcon: {
     fontSize: 18,
-    color: '#007bff',
+    color: '#F34C24',
     marginLeft: 4,
   },
 }));
