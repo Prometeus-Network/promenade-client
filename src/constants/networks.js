@@ -24,13 +24,13 @@ export const NETWORK_LABEL = {
 
 export const Contracts = {
   [ChainId.FANTOM]: {
-    auction: '0xdb404BF33c90b51176cA3db85288296B8594D134',
-    sales: '0x19fD7C9B72cd944f987E0aB1FdD33fF8f68Cf87C', //Marketplace Proxy
-    bundleSales: '0x0EeB6B95B52dfDFb86CcF960F8408a211555b63b', //Bundle Marketplace Proxy
-    factory: '0x39B7788d6bb04d1860aaA6685F109aFD95D79Db3', //FantomNFTFactory
-    privateFactory: '0x21CC778A6Ab21CBbB0ea62f0bFC7e6163C06dD75', //FantomNFTFactoryPrivate
-    artFactory: '0x865AeDe044a707B9a3e127908Ad1F3f4F1086949',
-    privateArtFactory: '0x1Ec3452a2A96AEd6A4513D6A036d17a6C3449551',
+    auction: '0x9Ad6a97663D7876B3447E5381936eF2979c9FeDc',
+    sales: '0x4100a787A4e1D3b6Bb5DfEaa9eb175D2A3617FdA', //Marketplace Proxy
+    bundleSales: '0xB0D2E4332c18f4dADCAA7174112D6711cb55fb8f', //Bundle Marketplace Proxy
+    factory: '0x519C9e35e476e157E0C6aA04128ff37Dd80A6E18', //FantomNFTFactory
+    privateFactory: '0x2CF2b3bFbB7b5f019068b6c592087b05C1e5CB4A', //FantomNFTFactoryPrivate
+    artFactory: '0x4c214E007bEb3d67F82115E361419af61bEC39f4',
+    privateArtFactory: '0x01E610d8A168068eB7Cd5275f1Ab62317eB12Fc1',
   },
   [ChainId.FANTOM_TESTNET]: {
     auction: '0xFF0a1F5601c9157D05B4379AD9B507A0435f9C3d',
