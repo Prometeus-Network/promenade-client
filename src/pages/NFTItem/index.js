@@ -2546,7 +2546,7 @@ const NFTItem = () => {
             <div className={styles.currentPrice}>{bestListing.price}</div>
             <div className={styles.currentPriceUSD}>
               (
-              {prices[bestListing.token.address] ? (
+              {prices[bestListing.token.address] >= 0 ? (
                 `$${(
                   bestListing.price * prices[bestListing.token.address]
                 ).toFixed(3)}`
