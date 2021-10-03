@@ -31,7 +31,7 @@ import CollectionsActions from 'actions/collections.actions';
 import iconCopy from 'assets/svgs/copy.svg';
 import iconSettings from 'assets/svgs/settings.svg';
 import iconShare from 'assets/svgs/share.svg';
-import iconPromenade from 'assets/svgs/logo_small_blue.svg';
+import iconPromenade from 'assets/svgs/logo_small_orange.svg';
 import iconFacebook from 'assets/imgs/facebook.png';
 import iconTwitter from 'assets/svgs/twitter_blue.svg';
 import IconList from 'assets/icons/iconList';
@@ -426,7 +426,7 @@ const AccountDetails = () => {
   const handleShareToTwitter = () => {
     handleClose();
     window.open(
-      `https://twitter.com/intent/tweet?text=Check%20out%20this%20account%20on%20Artion&url=${window.location.href}`,
+      `https://twitter.com/intent/tweet?text=Check%20out%20this%20account%20on%20Promenade&url=${window.location.href}`,
       '_blank'
     );
   };
@@ -646,7 +646,7 @@ const AccountDetails = () => {
       return (
         <Suspense
           fallback={
-            <Loader type="Oval" color="#007BFF" height={32} width={32} />
+            <Loader type="Oval" color="#F34C24" height={32} width={32} />
           }
         >
           <SuspenseImg className={styles.mediaInner} src={image} />

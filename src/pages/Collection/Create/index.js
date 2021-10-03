@@ -41,7 +41,7 @@ import { isAddress } from 'utils';
 const CustomRadio = withStyles({
   root: {
     '&$checked': {
-      color: '#1969FF',
+      color: '#F34C24',
     },
   },
   checked: {},

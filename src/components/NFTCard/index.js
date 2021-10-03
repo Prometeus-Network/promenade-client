@@ -23,7 +23,22 @@ import { useAuctionContract } from 'contracts';
 import useTokens from 'hooks/useTokens';
 
 import iconPlus from 'assets/svgs/plus.svg';
-import wFTMLogo from 'assets/imgs/wftm.png';
+
+import iconFTM from 'assets/imgs/ftm.png';
+import iconWFTM from 'assets/imgs/wftm.png';
+import iconUSDT from 'assets/imgs/usdt.png';
+import iconUSDC from 'assets/imgs/usdc.png';
+import iconDAI from 'assets/imgs/dai.png';
+
+const icons = {
+  ftm: iconFTM,
+  wftm: iconWFTM,
+  usdt: iconUSDT,
+  usdc: iconUSDC,
+  dai: iconDAI,
+  '0x1ef81cc9040a7bf316eed03bcae56edc645e1425': iconWFTM,
+  '0x0000000000000000000000000000000000000000': iconFTM,
+};
 
 import styles from './styles.module.scss';
 
@@ -180,7 +195,7 @@ const BaseCard = ({ item, loading, style, create, onCreate, onLike }) => {
               fallback={
                 <Loader
                   type="Oval"
-                  color="#007BFF"
+                  color="#F34C24"
                   height={32}
                   width={32}
                   className={styles.loader}
@@ -280,7 +295,7 @@ const BaseCard = ({ item, loading, style, create, onCreate, onLike }) => {
                       fallback={
                         <Loader
                           type="Oval"
-                          color="#007BFF"
+                          color="#F34C24"
                           height={32}
                           width={32}
                           className={styles.loader}
@@ -336,7 +351,13 @@ const BaseCard = ({ item, loading, style, create, onCreate, onLike }) => {
                 <Skeleton width={80} height={20} />
               ) : (
                 <div className={cx(styles.label, styles.price)}>
-                  <img src={auctionActive ? auction.token.icon : wFTMLogo} />
+                  <img
+                    src={
+                      auctionActive
+                        ? auction.token.icon
+                        : icons[item.paymentToken.toLowerCase()] || iconWFTM
+                    }
+                  />
                   {formatNumber(
                     auctionActive ? auction.reservePrice : item?.price || 0
                   )}
