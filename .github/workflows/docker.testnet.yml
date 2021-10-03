@@ -1,4 +1,4 @@
-name: Build docker image (mainnet)
+name: Build docker image (testnet)
 
 env:
   REGISTRY: registry.digitalocean.com
@@ -11,7 +11,7 @@ on:
 
 jobs:
   build:
-    environment: mainnet
+    environment: testnet
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
