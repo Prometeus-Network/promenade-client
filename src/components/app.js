@@ -43,7 +43,7 @@ const App = () => {
       } else if (chainId === ChainId.FANTOM_TESTNET) {
         const provider = new ethers.providers.Web3Provider(window.ethereum);
         const oracle = new ethers.Contract(
-          '0xe04676B9A9A2973BCb0D1478b5E1E9098BBB7f3D',
+          '0xf4766552D15AE4d256Ad41B6cf2933482B0680dc',
           [
             {
               inputs: [],
