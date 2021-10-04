@@ -423,6 +423,32 @@ export const useApi = () => {
     return res.data;
   };
 
+  const addPaymentToken = async (
+    { chainlinkProxy, payToken, decimals },
+    authToken,
+    signature,
+    signatureAddress
+  ) => {
+    const data = {
+      chainlinkProxy,
+      payToken,
+      decimals,
+      signature,
+      signatureAddress,
+    };
+
+    const res = await axios({
+      method: 'post',
+      url: `${apiUrl}/payToken/addNewToken`,
+      data: JSON.stringify(data),
+      headers: {
+        'Content-Type': 'application/json',
+        Authorization: `Bearer ${authToken}`,
+      },
+    });
+    return res.data;
+  };
+
   const banCollection = async (
     address,
     authToken,
@@ -829,5 +855,6 @@ export const useApi = () => {
     updateNotificationSettings,
     addUnlockableContent,
     retrieveUnlockableContent,
+    addPaymentToken,
   };
 };

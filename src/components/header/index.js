@@ -18,6 +18,8 @@ import { ADMIN_ADDRESS } from 'constants/index';
 import WFTMModal from 'components/WFTMModal';
 import ModModal from 'components/ModModal';
 import BanCollectionModal from 'components/BanCollectionModal';
+import AddPaymentTokeModal from 'components/AddPaymentTokenModal';
+
 import BanItemModal from 'components/BanItemModal';
 import BoostCollectionModal from 'components/BoostCollectionModal';
 import ConnectWalletModal from 'components/ConnectWalletModal';
@@ -59,6 +61,9 @@ const Header = ({ border }) => {
   const [modModalVisible, setModModalVisible] = useState(false);
   const [isBan, setIsBan] = useState(false);
   const [banCollectionModalVisible, setBanCollectionModalVisible] = useState(
+    false
+  );
+  const [isPaymentTokenModalVisible, setPaymentTokenModalVisible] = useState(
     false
   );
   const [banItemModalVisible, setBanItemModalVisible] = useState(false);
@@ -256,6 +261,11 @@ const Header = ({ border }) => {
     handleMenuClose();
   };
 
+  const addPaymentToken = () => {
+    setPaymentTokenModalVisible(true);
+    handleMenuClose();
+  };
+
   const renderMenu = (
     <Menu
       anchorEl={anchorEl}
@@ -321,6 +331,9 @@ const Header = ({ border }) => {
             </div>,
             <div key={6} className={styles.menuItem} onClick={boostCollection}>
               Boost Collection
+            </div>,
+            <div key={8} className={styles.menuItem} onClick={addPaymentToken}>
+              Add payment token
             </div>,
             <div key={7} className={styles.menuSeparator} />,
           ]
@@ -566,6 +579,13 @@ const Header = ({ border }) => {
         isBan={isBan}
         onClose={() => setBanCollectionModalVisible(false)}
       />
+      <AddPaymentTokeModal
+        visible={isPaymentTokenModalVisible}
+        onClose={() => {
+          setPaymentTokenModalVisible(true);
+        }}
+      />
+
       <BanItemModal
         visible={banItemModalVisible}
         onClose={() => setBanItemModalVisible(false)}
