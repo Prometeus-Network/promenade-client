@@ -295,7 +295,7 @@ const Header = ({ border }) => {
         FTM / WFTM Station
       </div>
       <div className={styles.menuSeparator} />
-      {account?.toLowerCase() === ADMIN_ADDRESS.toLowerCase()
+      {account?.toLowerCase() === ADMIN_ADDRESS[chainId].toLowerCase()
         ? [
             <div key={0} className={styles.menuItem} onClick={addMod}>
               Add Mod

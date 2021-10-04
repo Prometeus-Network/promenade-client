@@ -57,11 +57,12 @@ const OfferModal = ({
     if (tokenPriceInterval) clearInterval(tokenPriceInterval);
     const func = async () => {
       const tk = selected[0].address || ethers.constants.AddressZero;
+
       try {
         const salesContract = await getSalesContract();
         const price = await salesContract.getPrice(tk);
         setTokenPrice(parseFloat(ethers.utils.formatUnits(price, 18)));
-      } catch {
+      } catch (e) {
         setTokenPrice(null);
       }
     };

@@ -25,7 +25,7 @@ import styles from './styles.module.scss';
 const CollectionCreate = () => {
   const dispatch = useDispatch();
   const history = useHistory();
-  const { account } = useWeb3React();
+  const { account, chainId } = useWeb3React();
 
   const {
     explorerUrl,
@@ -49,7 +49,7 @@ const CollectionCreate = () => {
 
   useEffect(() => {
     if (account && authToken) {
-      if (account === ADMIN_ADDRESS) {
+      if (account === ADMIN_ADDRESS[chainId]) {
         fetchCollections();
       } else {
         history.replace('/');
