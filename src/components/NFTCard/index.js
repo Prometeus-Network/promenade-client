@@ -36,6 +36,7 @@ const icons = {
   usdt: iconUSDT,
   usdc: iconUSDC,
   dai: iconDAI,
+  '0x21be370D5312f44cB42ce377BC9b8a0cEF1A4C83': iconWFTM,
   '0x1ef81cc9040a7bf316eed03bcae56edc645e1425': iconWFTM,
   '0x0000000000000000000000000000000000000000': iconFTM,
 };

@@ -24,7 +24,7 @@ export const NETWORK_LABEL = {
 
 export const Contracts = {
   [ChainId.FANTOM]: {
-    auction: '0x9Ad6a97663D7876B3447E5381936eF2979c9FeDc',
+    auction: '0xb5fd13b09666D2cCe659c91bD6A159BcD776f776',
     sales: '0x4100a787A4e1D3b6Bb5DfEaa9eb175D2A3617FdA', //Marketplace Proxy
     bundleSales: '0xB0D2E4332c18f4dADCAA7174112D6711cb55fb8f', //Bundle Marketplace Proxy
     factory: '0x519C9e35e476e157E0C6aA04128ff37Dd80A6E18', //FantomNFTFactory
